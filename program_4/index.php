@@ -74,7 +74,7 @@
     </div>
 </div>
 <script>
-$.get( "http://mywebdevcourse.xyz/api/api.php/products?order=id&page=1,10")
+$.get( "http://mwsu-webdev.xyz/api/api.php/products?order=id&page=1,10")
   .done(function( data ) {
     console.log( data );
     var cols = data.products.columns;
@@ -87,19 +87,30 @@ $.get( "http://mywebdevcourse.xyz/api/api.php/products?order=id&page=1,10")
     console.log(col_head);
     $('thead').append(col_head);
     var rec_body= "<tr>";
-    for(var j=0;j<data.products.records.length;j++)
+	var rec = data.products.records;
+    for(var j=0;j<rec.length;j++)
     {
-        var rec = data.products.records;
-        //var rec_body= "<tr>";
-        for(var i=0;i<rec.length;i++){
-            //console.log(rec[i]);
-            rec_body[i] = rec_body[i] + "<td>"+rec[i]+"</td>";
-			console.log(rec_body[i]);
+        //var rec = data.products.records;
+        rec_body=rec_body + "<tr>";
+        for(var i=0;i<rec[j].length;i++){  
+            console.log(rec[i]);
+            //rec_body = rec_body + "<td>"+rec[j][i]+"</td>";
+			if(i==rec[j].length-1){
+				var img = rec[j][i] .split(' ');
+				console.log(img);
+				var newimg=img[0].replace("~","50");
+				rec[j][i] = "<img src="+newimg+">";
+				 
+				
+			}
+			 rec_body = rec_body + "<td>"+rec[j][i]+"</td>";
+			
+			//console.log(rec_body[i]);
         
         }
-        rec_body[j] = rec_body[j] + "<td style=\"width: 36px;\"></td></tr>";
+        rec_body = rec_body + "<td style=\"width: 36px;\"></td></tr>";
         //console.log(rec_body[j]);
-        $('tbody').append(rec_body[j]); 
+        $('tbody').append(rec_body); 
       }
     
   });
