@@ -28,4 +28,8 @@ foreach($json_array as $entry){
 } 
 //print_r($json_array)
 mysql_close($conn);
+<<<<<<< HEAD
 ?>  
+=======
+?>  
+>>>>>>> ab917782c1d8ba154a4edae61a0e03adbf9963d1

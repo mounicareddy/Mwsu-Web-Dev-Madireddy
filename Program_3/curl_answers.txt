@@ -1,0 +1,24 @@
+1.command:
+ curl -X "GET" http://mywebdevcourse.xyz/api/api.php/users?filter=email,eq,"mounicareddy555@gmail.com"
+ 
+2.Command:
+curl -H "Content-Type: application/json" -X "POST" http://mywebdevcourse.xyz/api/api.php/users -d '{"fname":"Salman","lname":"Kahn","display_name":"coolasiwannabe","email":"salman.kahn@indianactors.org","password":"123456789"}'
+
+3.Command:  curl -X "GET" http://mywebdevcourse.xyz/api/api.php/products?filter=price,eq,99.99
+
+4.command:
+curl --globoff -X "GET" http://mywebdevcourse.xyz/api/api.php/products?filter[]=desc,cs,"acer"&filter[]=price,le,100&satisfy=all
+
+5.Command:
+ curl --globoff -X "GET" http://mywebdevcourse.xyz/api/api.php/products?filter[]=desc,cs,"tablet"&filter[]=desc,cs,"acer"&satisfy=all
+
+ 
+6.Command:
+  curl --globoff -X "GET" http://mywebdevcourse.xyz/api/api.php/products?filter[]=desc,cs,intel&filter[]=desc,cs,i7&filter[]=desc,cs,ssd&satisfy=all
+
+ 
+7.Command:
+ curl --globoff -X "GET" http://mywebdevcourse.xyz/api/api.php/products?filter[]catgeory,eq,"cellphones"&filter[]=desc,ne,"%apple%"&satisfy=all
+
+9.Command:
+ curl -X "DELETE" http://mywebdevcourse.xyz/api/api.php/users/2
