@@ -118,7 +118,7 @@ if( $fname && $lname && $uname && $email && $pass1 && $pass2){
 
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-		<form role="form" action="register.php" method="POST">
+		<form role="form" action="index.php" method="POST">
 			<h2>Please Sign Up <small>It's free and always will be.</small></h2>
         <?php
   if(isset($msg)){
@@ -188,7 +188,7 @@ if( $fname && $lname && $uname && $email && $pass1 && $pass2){
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>
 				<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
 			</div>
 			<div class="modal-body">
